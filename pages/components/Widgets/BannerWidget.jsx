@@ -73,11 +73,11 @@ export default function BannerWidget() {
             >
                 {banners.map((banner, index) => (
                     <SwiperSlide key={index} className='w-9/12 mx-1 md:mx-4'>
-                        <button className='outset-none w-full'
+                        <button className='outset-none w-full mx-4'
                             onClick={() => handleClick(banner.name)}
                         >
 
-                            <Image priority width={500} height={500} alt={banner.name} src={banner.image} className='rounded-md w-full' draggable="false" />
+                            <Image priority width={500} height={500} alt={banner.name} src={banner.image} className='rounded-md w-[90%] lg:w-full' draggable="false" />
 
                         </button>
 

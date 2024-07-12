@@ -35,7 +35,6 @@ export default function RestaurantWidget() {
                 spaceBetween={5}
                 slidesPerView={5}
                 pagination={{ clickable: true }}
-                navigation
                 breakpoints={{
                     // when window width is >= 640px
                     640: {
