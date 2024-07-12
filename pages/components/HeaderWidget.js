@@ -1,5 +1,6 @@
 'use client';
 import { useState,useEffect } from "react";
+import {motion} from 'framer-motion';
 import HamburgerIcon from './Icons/HamburgerIcon';
 import MapIcon from './Icons/MapIcon';
 import CartIcon from './Icons/CartIcon';
@@ -15,7 +16,6 @@ import PortalWidget from './Widgets/PortalWidget';
 import SortWidget from './Widgets/SortWidget';
 
 
-import {motion} from 'framer-motion';
 
 export default function HeaderWidget() {
 
@@ -24,6 +24,15 @@ export default function HeaderWidget() {
   const [isSigninOpen, setSigninOpen] = useState(false);
   const [isCartOpen, setCartOpen] = useState(false);
   const [portalElement, setPortalElement] = useState(null);
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleSearchFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleSearchBlur = () => {
+    setIsFocused(false);
+  };
 
 
   const handleOpenSidebar = () => {
@@ -134,7 +143,8 @@ onClick={handleOpenLocation}
 
 
 <div className="hidden lg:flex ml-[180px]">
-<SearchWidget/>
+<SearchWidget />
+{/* HERE */}
 </div>
 </div>
 

@@ -46,7 +46,7 @@ const SigninWidget = ({ isOpen, onClose }) => {
                     animate="visible"
                     exit="hidden"
                     variants={backdropVariants}
-                    className="fixed inset-0 bg-black bg-opacity-50  z-10"
+                    className="fixed inset-0 bg-black bg-opacity-50  z-[999]"
                     onClick={onClose}
                 />
             )}
