@@ -1,16 +1,24 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ButtonWidget from './ButtonWidget';
 import RestaurantWidget from './RestaurantWidget';
 import GroceryWidget from './GroceryWidget';
 import GroceryIcon from '../Icons/GroceryIcon';
+import { fetchRestaurants, fetchTags } from '../../../services/api';
 import RestarantSpoonsIcon from '../Icons/RestarantSpoonsIcon';
+
 
 
 const TabWidget = () => {
 
     const [activeTab, setActiveTab] = useState(0);
+    const [restaurants, setRestaurants] = useState([]);
+    const [tags, setTags] = useState([]);
+    const [selectedTags, setSelectedTags] = useState([]);
+    const [sortParam, setSortParam] = useState('');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [location, setLocation] = useState({ latitude: '', longitude: '' });
 
     const tabs = [{ name: "Restaurants", icon: <RestarantSpoonsIcon className="size-5" /> }, { name: "Grocery", icon: <GroceryIcon className="size-5" /> }];
 
@@ -19,6 +27,9 @@ const TabWidget = () => {
         { id: 1, content: <GroceryWidget /> },
     ];
 
+    // useEffect(() => {
+    //     fetchTags().then(setTags);
+    // }, []);
 
     return (
         <motion.div

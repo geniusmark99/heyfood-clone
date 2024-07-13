@@ -14,7 +14,7 @@ export default function FoodListWidget({ FoodTypeDesc }) {
 
 
     return (
-        <div className='flex flex-col'>
+        <div className='flex flex-col last:mb-20'>
             <div className='flex justify-between items-center'>
                 <h1 className='font-bold text-xl md:text-2xl lg:text-3xl'>{FoodTypeDesc}</h1>
                 <span className='font-semibold text-lg'>Sell all</span>

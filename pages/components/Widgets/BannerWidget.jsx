@@ -56,7 +56,7 @@ export default function BannerWidget() {
         <div className="w-full mt-10">
             <Swiper
                 spaceBetween={1}
-                slidesPerView={0}
+                slidesPerView={1}
                 pagination={{ clickable: true }}
                 navigation
                 breakpoints={{

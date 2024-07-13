@@ -1,7 +1,6 @@
 import HeaderWidget from './components/HeaderWidget';
 import TabWidget from './components/Widgets/TabWidget';
 import MarkPopUpWidget from './components/Widgets/MarkPopUpWidget';
-import {fetchRestaurants, fetchTags} from '../services/api';
 
 
 
@@ -13,16 +12,13 @@ export const metadata = {
 
 export default function Home() {
   return <>  
-  <MarkPopUpWidget/>
-<main className=''>
+<MarkPopUpWidget/>
+<main>
 <HeaderWidget/>
 <div className="pt-[150px] md:pt-[90px]">
 <TabWidget/>
 </div>
-
 </main>
-  
-
 </>
 
 
