@@ -1,5 +1,6 @@
 import HeaderWidget from './components/HeaderWidget';
 import TabWidget from './components/Widgets/TabWidget';
+import {fetchRestaurants, fetchTags} from '../services/api';
 
 
 

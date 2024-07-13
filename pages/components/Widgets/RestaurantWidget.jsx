@@ -54,7 +54,7 @@ export default function RestaurantWidget() {
                     <SwiperSlide key={index}>
                         <ButtonWidget onClick={food.onClick} className="flex flex-col items-center hover:bg-gray-100 py-2 px-3 rounded-md">
                             <Image priority width={500} height={200} src={food.image} alt={food.name} className="size-12" />
-                            <span className="mt-2 text-base font-[500] whitespace-nowrap">{food.name}</span>
+                            <span className="mt-2 text-sm md:text-base font-[500] whitespace-nowrap">{food.name}</span>
                         </ButtonWidget>
 
                     </SwiperSlide>
